@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TestIn : ITest
@@ -131,6 +132,8 @@ public class TestIn : ITest
             Debug.Log($"MyClass {cls.count}");
             Debug.Log($"MyClass {cls.GetHashCode()}");
         }
+
+        TestOut1();
     }    
     
     private void _TestOut(out int count, out MyStruct str, out MyClass cls)
@@ -139,5 +142,20 @@ public class TestIn : ITest
         str.count = 99;
         
         cls = new MyClass(99);
+    }
+
+    /// <summary>
+    /// out参数的方法内会赋值
+    /// </summary>
+    private void TestOut1()
+    {
+        var dic = new Dictionary<int, int>();
+        int ret = -1;
+        if (dic.TryGetValue(1000, out ret))
+        {
+            Debug.Log(ret);
+            return;
+        }
+        Debug.Log(ret);  // 0  default
     }
 }
