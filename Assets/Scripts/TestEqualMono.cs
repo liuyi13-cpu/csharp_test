@@ -38,7 +38,7 @@ public class TestEqualMono : MonoBehaviour
         Debug.Log("Awake TestEqualMono");
     }
 
-    protected void Start()
+    protected virtual void Start()
     {
         Debug.Log("Start TestEqualMono");
     }

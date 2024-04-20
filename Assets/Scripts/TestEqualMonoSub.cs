@@ -10,7 +10,7 @@ public class TestEqualMonoSub : TestEqualMono
         Debug.Log("TestEqualMonoSub TestEqualMono");
     }
 
-    private new void Start()
+    protected override void Start()
     {
         base.Start();
         Debug.Log("TestEqualMonoSub TestEqualMono");
