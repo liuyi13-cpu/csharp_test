@@ -21,7 +21,7 @@ public class TestIn : ITest
         }
     }
 
-    public void Test()
+    public void DoTest()
     {
         TestIn1();
         TestRef();

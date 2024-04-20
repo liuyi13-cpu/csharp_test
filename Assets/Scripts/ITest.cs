@@ -1,5 +1,5 @@
 
 public interface ITest
 { 
-    void Test();
+    void DoTest();
 }

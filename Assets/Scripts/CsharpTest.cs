@@ -3,19 +3,15 @@ using UnityEngine;
 
 public class CsharpTest : MonoBehaviour
 {
-    void Start()
+    private void Start()
     {
         var list = new List<ITest>();
         list.Add(new TestIn());
+        list.Add(new TestEqual());
+
         foreach (var test in list)
         {
-            test.Test();
+            test.DoTest();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
